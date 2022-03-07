@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LystCat</string>
+
+    <string name="title_cat_detail">Cat Detail</string>
+</resources>
