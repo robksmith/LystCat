@@ -71,7 +71,7 @@ class CatDetailFragment : Fragment()
         }
     }
 
-    // Note - I was trying to pass this a list of cat url images to display in a viewpager but got bogged down with the api call - so just one image will do for now
+    // managed to get the viewpager2 working with list of cat images in the end
     private fun initImagePagerView(imagesArray: List<String>)
     {
         if ( imagesArray.isEmpty() ) return

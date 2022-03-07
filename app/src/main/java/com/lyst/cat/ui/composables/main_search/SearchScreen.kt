@@ -56,10 +56,3 @@ fun SearchScreen(
         }
     }
 }
-
-@Preview
-@Composable
-fun PreviewCatSearchEditText()
-{
-    //CatSearchEditText(vm)
-}

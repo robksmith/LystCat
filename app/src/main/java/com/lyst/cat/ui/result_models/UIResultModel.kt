@@ -1,5 +1,6 @@
 package com.lyst.cat.ui.result_models
 
+// Note - some fields in this UIResultModel - are not used - I use something similar to this in my other projects (this is also recommended by google)
 data class UIResultModel<out T>(val status: Status, val data: T?, val message: String?, val code:Int)
 {
     enum class Status
