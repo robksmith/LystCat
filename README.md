@@ -6,17 +6,17 @@ Simple app to display a **Lyst** of Cats using https://thecatapi.com/
 
 This app was built with Android Studio Bumblebee 2021.1.1
 
-To run, just add your own api key for thecatapi.com into the Common/Constants.kt file and hit the run button
+To run, just hit the run button
 
-## Note / to improve
+## Composables vs XML
 
 *Because I don't know whether you use composables or xml views, I have built the Main view using compose and the cat detail page using xml. I wouldn't normally do this - it is just for demonstration because I didn't know what you prefer at Lyst.*
 
 ## Overview
 
-It is basically made up of two activities (Main and Detail). The *Main* activity hosts 3 main composable screens and the *Detail* screen hosts one fragmetn
+It is basically made up of two activities (Main and Detail). The *Main* activity hosts 3 main composable screens and the *Detail* screen hosts one fragment
 
-The first activity host the main section which contains three sections as follow:
+The first activity hosts the main section which contains three sections as follow:
 
 1. **Home (Composable)** => Displays all breeds of cats
 
@@ -26,7 +26,7 @@ The first activity host the main section which contains three sections as follow
 
 The second activity is driven by a navigation graph with just one fragment in it:
 
-1. **Cat Detail (Fragment)** => After a cat has been clicked on, shows the details
+1. **Cat Detail (Fragment)** => After a cat has been clicked on, shows the details of the cat (name, description etc)
 
 ## Because time was limited for me on this demo, please note ##
 
@@ -42,10 +42,19 @@ The second activity is driven by a navigation graph with just one fragment in it
 
 ## Testing
 
-There are a few demo integration tests included using the FragmentScenario class and Espresso and Mockito. Although loads more tests could be written.  
+To test individual use cases, you would add something along the lines of:
+
+* Create a fake repository of type CatRepository
+* In the test case, along with the FakeRepository, also instantiate the test case class to be tested.
+* We can then test our use case against our fake repo and and make assertions as required
 
 ## Other libraries used
 
 * Retrofit
+* Glide
 
-d
+## Screenshots
+
+![This is an image](app/src/main/java/com/lyst/cat/common/cat1.jpg)
+
+![This is an image](app/src/main/java/com/lyst/cat/common/cat2.jpg)
